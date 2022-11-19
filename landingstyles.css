@@ -1,0 +1,105 @@
+/*
+ThatStella7922 Landing Website Stylesheet
+ 
+v2022.1118.0
+*/
+
+/* Prevent font scaling in landscape mode on mobile devices while still allowing user zoom */
+@media screen and (orientation: landscape) {
+    html {
+        -webkit-text-size-adjust: 100%;
+    }
+}
+
+/* handles safe area for notched iphones */
+@supports(margin: max(0px)) {
+    body {
+        margin-left: max(0px, env(safe-area-inset-left));
+        margin-right: max(0px, env(safe-area-inset-right));
+    }
+}
+
+@supports(padding:max(0px)) {
+    body, header, footer, nav {
+        padding-left: min(0vmin, env(safe-area-inset-left));
+        padding-right: min(0vmin, env(safe-area-inset-right));
+    }
+}
+/* end of safe area handling for notched iphones */
+
+/* Styling for all device sizes */
+a {
+    color:#E872E2;
+}
+
+nav {
+    text-align: center;
+    background-image: url('idk.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-bottom: 4px solid #E872E2;
+    height: 98vh;
+}
+
+nav .links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+  
+nav .links a {
+    /* basically make a button */
+    background-color: #e872e2;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    margin: 3px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+nav .navcategoryselected {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+    /* Media quiery to check if the browser supports image effects  */
+    nav .links {
+        /* Blur the background */
+        background-color: rgba(0, 0, 0, 0.35);
+        -webkit-backdrop-filter: blur(4px);
+        backdrop-filter: blur(4px);
+    }
+
+    #backdrop-warning {
+        display: none;
+    }
+}
+  
+/* Media query for small (phone) screens
+@media screen and (max-width: 320px) {
+    nav {
+        float: none;
+    }
+
+    nav a {
+        width: 100%;
+    }
+}*/
+
+/* dark mode styling! */
+/* temporary disable of dark mode styling
+@media (prefers-color-scheme: dark) {
+    * {
+        color:#FFFFFF;
+    }
+    
+    body {
+        background-color: #1a1a1a;
+    }
+}*
