@@ -4,6 +4,12 @@ ThatStella7922 Landing Website Stylesheet
 v2022.1118.0
 */
 
+/* small css reset and set a font so my eyes dont die*/
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+
 /* Prevent font scaling in landscape mode on mobile devices while still allowing user zoom */
 @media screen and (orientation: landscape) {
     html {
@@ -32,7 +38,20 @@ a {
     color:#E872E2;
 }
 
-nav {
+#horizontalcontainer {
+
+}
+
+#verticalcontainer {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+#navigation {
     text-align: center;
     background-image: url('idk.jpg');
     -webkit-background-size: cover;
@@ -42,34 +61,40 @@ nav {
     background-repeat: no-repeat;
     background-position: center;
     border-bottom: 4px solid #E872E2;
-    height: 98vh;
+    height: 99.2vh;
 }
 
-nav .links ul {
+#navigation #horizontalcontainer .links ul {
     list-style: none;
     padding: 0;
-    margin: 0;
-}
-  
-nav .links a {
-    /* basically make a button */
-    background-color: #e872e2;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    margin: 3px;
-    text-decoration: none;
-    display: inline-block;
+    margin: auto;
 }
 
-nav .navcategoryselected {
-    font-weight: bold;
-    text-decoration: underline;
+#navigation #verticalcontainer #horizontalcontainer .links li {
+    display: inline-block;
 }
+  
+#navigation #verticalcontainer #horizontalcontainer .links a {
+    /* basically make a button */
+    background-color: #E872E2;
+    border-radius: 25px;
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    margin: 3px;
+    text-decoration: none;
+    display: inline-block; 
+}
+
+#navigation #verticalcontainer #horizontalcontainer #displayname {
+    font-size: 38px;
+    color: #ffffff
+}
+
 
 @supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
     /* Media quiery to check if the browser supports image effects  */
-    nav .links {
+    #verticalcontainer {
         /* Blur the background */
         background-color: rgba(0, 0, 0, 0.35);
         -webkit-backdrop-filter: blur(4px);
@@ -102,4 +127,4 @@ nav .navcategoryselected {
     body {
         background-color: #1a1a1a;
     }
-}*
+}*/
