@@ -28,6 +28,10 @@ v2022.1118.0
 }
 
 /* Styling for all device sizes */
+body {
+    font-family: sans-serif;
+}
+
 a {
     color:#E872E2;
 }
