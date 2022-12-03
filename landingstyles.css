@@ -6,7 +6,7 @@ v2022.1127.0
 
 /* small css reset and set a font so my eyes dont die */
 body {
-    margin: 0px;
+    margin: 0px 0px 0px 0px;
 }
 
 /* Prevent font scaling in landscape mode on mobile devices while still allowing user zoom */
