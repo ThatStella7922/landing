@@ -7,7 +7,6 @@ v2022.1127.0
 /* small css reset and set a font so my eyes dont die */
 body {
     margin: 0px;
-    font-family: sans-serif;
 }
 
 /* Prevent font scaling in landscape mode on mobile devices while still allowing user zoom */
@@ -34,12 +33,12 @@ body {
 /* end of safe area handling for notched iphones */
 
 /* Styling for all device sizes */
-a {
-    color:#E872E2;
+body {
+    font-family: "Hind", sans-serif;
 }
 
-#horizontalcontainer {
-
+a {
+    color:#E872E2;
 }
 
 #verticalcontainer {
@@ -80,7 +79,7 @@ a {
     border-radius: 25px;
     border: none;
     color: white;
-    padding: 10px 25px;
+    padding: 6px 20px;
     margin: 3px;
     text-decoration: none;
     display: inline-block; 
@@ -88,24 +87,53 @@ a {
 
 #navigation #verticalcontainer #horizontalcontainer #displayname {
     font-size: 38px;
+    font-weight: 300;
     color: #ffffff
 }
 
+footer {
+    text-align: center;
+}
 
+/* Media quiery to check if the browser supports image effects */
 @supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
-    /* Media quiery to check if the browser supports image effects  */
     #verticalcontainer {
         /* Blur the background */
-        background-color: rgba(0, 0, 0, 0.35);
-        -webkit-backdrop-filter: blur(4px);
-        backdrop-filter: blur(4px);
+        background-color: rgba(0, 0, 0, 0.15);
+        -webkit-backdrop-filter: blur(6px);
+        backdrop-filter: blur(6px);
     }
 
     #backdrop-warning {
         display: none;
     }
 }
+
+/* This media query checks if the browser does NOT support image effects */
+@supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+    #verticalcontainer {
+        background-color: rgba(0, 0, 0, 0.70);
+    }
+
+    #backdrop-warning {
+        display: block;
+        position: absolute;
+        margin: 5px;
+        left: 0px;
+        bottom: 0px;
+        color: #FFFFFF;
+        font-size: 14px;
+    }
+}
+
   
+/* Media query for screens wider than 768px */
+@media screen and (min-width: 768px) {
+    #navigation #verticalcontainer #horizontalcontainer #displayname {
+        font-size: 52px;
+    }
+}
+
 /* Media query for small (phone) screens
 @media screen and (max-width: 320px) {
     nav {
@@ -118,13 +146,19 @@ a {
 }*/
 
 /* dark mode styling! */
-/* temporary disable of dark mode styling
 @media (prefers-color-scheme: dark) {
     * {
-        color:#FFFFFF;
+        
     }
     
+    /* Set the body color to a very dark gray */
     body {
         background-color: #1a1a1a;
+        color:#FFFFFF;
     }
-}*/
+
+    /* Make the image darker */
+    #verticalcontainer {
+        background-color: rgba(0, 0, 0, 0.60);
+    }
+}
