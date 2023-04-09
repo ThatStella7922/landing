@@ -63,16 +63,22 @@ a {
     height: 100vh;
 }
 
-#navigation #horizontalcontainer .links ul {
+/* Styking for the social links */
+#navigation #horizontalcontainer .social-links li {
     list-style: none;
     padding: 0;
     margin: auto;
-}
-
-#navigation #verticalcontainer #horizontalcontainer .links li {
     display: inline-block;
 }
-  
+
+/* Styling for the website links */
+#navigation #horizontalcontainer .links form {
+    padding: 0;
+    margin: auto;
+    display: inline-block;
+}
+
+/* Styling for the website link achors */
 #navigation #verticalcontainer #horizontalcontainer .links a {
     /* basically make a button */
     background-color: #E872E2;
@@ -85,6 +91,7 @@ a {
     display: inline-block; 
 }
 
+/* Styling for the main ThatStella7922 text */
 #navigation #verticalcontainer #horizontalcontainer #displayname {
     font-size: 38px;
     font-weight: 300;
@@ -143,10 +150,6 @@ footer {
 
 /* dark mode styling! */
 @media (prefers-color-scheme: dark) {
-    * {
-        
-    }
-    
     /* Set the body color to a very dark gray */
     body {
         background-color: #1a1a1a;
