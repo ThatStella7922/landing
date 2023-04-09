@@ -1,7 +1,7 @@
 /*
 ThatStella7922 Landing Website Stylesheet
  
-v2022.1127.0
+v2023.0409.0
 */
 
 /* small css reset and set a font so my eyes dont die */
@@ -16,7 +16,7 @@ body {
     }
 }
 
-/* handles safe area for notched iphones */
+/* handles safe area for notched iphones 
 @supports(margin: max(0px)) {
     body {
         margin-left: max(0px, env(safe-area-inset-left));
@@ -30,7 +30,7 @@ body {
         padding-right: min(0vmin, env(safe-area-inset-right));
     }
 }
-/* end of safe area handling for notched iphones */
+end of safe area handling for notched iphones */
 
 /* Styling for all device sizes */
 body {
@@ -52,7 +52,7 @@ a {
 
 #navigation {
     text-align: center;
-    background-image: url('idk.jpg');
+    background-image: url('https://thatstel.la/landing-assets/idk.jpg');
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -60,7 +60,7 @@ a {
     background-repeat: no-repeat;
     background-position: center;
     border-bottom: 4px solid #E872E2;
-    height: 99.2vh;
+    height: 100vh;
 }
 
 #navigation #horizontalcontainer .links ul {
@@ -134,16 +134,12 @@ footer {
     }
 }
 
-/* Media query for small (phone) screens
-@media screen and (max-width: 320px) {
-    nav {
-        float: none;
+/* Media query for small (phone) screens */
+@media screen and (max-width: 420px) {
+    #navigation #verticalcontainer #horizontalcontainer {
+    transform: translateY(-1vh);
     }
-
-    nav a {
-        width: 100%;
-    }
-}*/
+}
 
 /* dark mode styling! */
 @media (prefers-color-scheme: dark) {
