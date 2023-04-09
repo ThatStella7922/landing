@@ -71,24 +71,24 @@ a {
     display: inline-block;
 }
 
-/* Styling for the website links */
+/* Arrangement for the website buttons */
 #navigation #horizontalcontainer .links form {
     padding: 0;
     margin: auto;
     display: inline-block;
 }
-
-/* Styling for the website link achors */
-#navigation #verticalcontainer #horizontalcontainer .links a {
+/* Styling for the website link buttons (buttons pt2) */
+#navigation #verticalcontainer #horizontalcontainer .links form button {
     /* basically make a button */
     background-color: #E872E2;
     border-radius: 25px;
     border: none;
     color: white;
-    padding: 6px 20px;
-    margin: 3px;
+    padding: 9px 25px;
+    margin: 4px;
     text-decoration: none;
-    display: inline-block; 
+    cursor: pointer;
+    font-size: 100%;
 }
 
 /* Styling for the main ThatStella7922 text */
