@@ -3,7 +3,7 @@ ThatStella7922 Landing Website Stylesheet
 
 mreowww :3
 
-v2023.0409.2
+v2023.0410.0
 */
 
 /* small css reset because something was causing issues and im too dumb to figure out what it was */
@@ -55,7 +55,7 @@ a {
 
 #navigation {
     text-align: center;
-    background-image: url('https://thatstel.la/landing-assets/idk.jpg');
+    background-image: url('https://thatstel.la/landing-assets/IMG2931-LQ2.jpg');
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -74,6 +74,11 @@ a {
     color: #ffffff
 }
 
+/* Maximum width for the social links div */
+/* This is done so that the social links don't span across the entire width of the viewport in the case of a wide viewport */
+#navigation #horizontalcontainer .social-links {
+    max-width: 600px;
+}
 /* Arrangement for the social links */
 #navigation #horizontalcontainer .social-links form {
     list-style: none;
