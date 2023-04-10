@@ -63,12 +63,24 @@ a {
     height: 100vh;
 }
 
-/* Styking for the social links */
-#navigation #horizontalcontainer .social-links li {
+/* Arrangement for the social links */
+#navigation #horizontalcontainer .social-links form {
     list-style: none;
     padding: 0;
     margin: auto;
     display: inline-block;
+}
+/* Styling for the social links */
+#navigation #verticalcontainer #horizontalcontainer .social-links form button {
+    background-color: transparent;
+    border-radius: 25px;
+    border: none;
+    color: white;
+    padding: 9px 25px;
+    margin: 4px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 100%;
 }
 
 /* Arrangement for the website buttons */
