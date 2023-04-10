@@ -63,6 +63,14 @@ a {
     height: 100vh;
 }
 
+/* Styling for the main ThatStella7922 text */
+#navigation #verticalcontainer #horizontalcontainer #displayname {
+    font-size: 38px;
+    font-weight: 300;
+    margin: 0 0 20px 0;
+    color: #ffffff
+}
+
 /* Arrangement for the social links */
 #navigation #horizontalcontainer .social-links form {
     list-style: none;
@@ -70,15 +78,19 @@ a {
     margin: auto;
     display: inline-block;
 }
+/* Arrangement for the social section label */
+#navigation #horizontalcontainer .social-links .social-links-label {
+    margin-top: 5vh;
+    margin-bottom: 0;
+}
 /* Styling for the social links */
 #navigation #verticalcontainer #horizontalcontainer .social-links form button {
     background-color: transparent;
-    border-radius: 25px;
     border: none;
     color: white;
-    padding: 9px 25px;
+    padding: 9px 15px;
     margin: 4px;
-    text-decoration: none;
+    text-decoration: underline;
     cursor: pointer;
     font-size: 100%;
 }
@@ -103,16 +115,16 @@ a {
     font-size: 100%;
 }
 
-/* Styling for the main ThatStella7922 text */
-#navigation #verticalcontainer #horizontalcontainer #displayname {
-    font-size: 38px;
-    font-weight: 300;
-    color: #ffffff
-}
-
 footer {
     text-align: center;
 }
+
+/* Twemoji sizing */
+img.emoji {
+    height: 1.1em;
+    width: 1.1em;
+    vertical-align: -0.2em;
+ }
 
 /* Media quiery to check if the browser supports image effects */
 @supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
