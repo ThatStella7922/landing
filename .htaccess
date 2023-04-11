@@ -1,0 +1,2 @@
+RewriteCond %{REQUEST_URI} ^/mailto\.html$
+RewriteRule ^ mailto:contact@thatstel.la [L,NE,R=302]
