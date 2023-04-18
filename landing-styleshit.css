@@ -3,7 +3,7 @@ ThatStella7922 Landing Website Stylesheet
 
 mreowww :3
 
-v2023.0410.0
+v2023.0418.0
 */
 
 /* small css reset because something was causing issues and im too dumb to figure out what it was */
@@ -135,37 +135,33 @@ img.emoji {
     vertical-align: -0.2em;
  }
 
-/* Media quiery to check if the browser supports image effects */
-@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+/* Fallback CSS for devices that don't support the "fancier" stuff below with translucency and blurs */
+#verticalcontainer {
+    /* fallback to plain black */
+    background-color: rgb(0, 0, 0);
+    /* Translucent black if the browser supports it */
+    background-color: rgba(0, 0, 0, 0.3);
+}
+#backdrop-warning {
+    display: block;
+    margin: 5px;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+/* This media query checks if the browser does support image effects */
+@supports ((-webkit-backdrop-filter: blur(6px)) or (backdrop-filter: blur(6px))) {
     #verticalcontainer {
         /* Blur the background */
         background-color: rgba(0, 0, 0, 0.15);
         -webkit-backdrop-filter: blur(6px);
         backdrop-filter: blur(6px);
     }
-
+    
     #backdrop-warning {
         display: none;
     }
 }
-
-/* This media query checks if the browser does NOT support image effects */
-@supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
-    #verticalcontainer {
-        background-color: rgba(0, 0, 0, 0.70);
-    }
-
-    #backdrop-warning {
-        display: block;
-        position: absolute;
-        margin: 5px;
-        left: 0px;
-        bottom: 0px;
-        color: #FFFFFF;
-        font-size: 14px;
-    }
-}
-
   
 /* Media query for screens wider than 768px */
 @media screen and (min-width: 768px) {
