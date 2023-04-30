@@ -3,7 +3,7 @@ ThatStella7922 Landing Website Stylesheet
 
 mreowww :3
 
-v2023.0418.0
+v2023.0430.0
 */
 
 /* small css reset because something was causing issues and im too dumb to figure out what it was */
@@ -49,6 +49,7 @@ a {
     text-align: center;
     align-items: center;
     justify-content: center;
+    min-height: 100vh;
     height: 100%;
     width: 100%;
 }
@@ -63,14 +64,15 @@ a {
     background-repeat: no-repeat;
     background-position: center;
     border-bottom: 4px solid #E872E2;
-    height: 100vh;
+    min-height: 100vh;
+    height: 100%;
 }
 
 /* Styling for the main ThatStella7922 text */
 #navigation #verticalcontainer #horizontalcontainer #displayname {
     font-size: 38px;
     font-weight: 300;
-    margin: 0 0 20px 0;
+    margin: 20px 0 20px 0;
     color: #ffffff
 }
 
