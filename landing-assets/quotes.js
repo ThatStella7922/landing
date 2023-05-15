@@ -2,7 +2,7 @@
 ThatStella7922 Landing Website 'quotes' Handler
 No I didn't have a better name for it
 
-v2023.0418.0
+v2023.0515.0
 */
 
 const quotes = [
