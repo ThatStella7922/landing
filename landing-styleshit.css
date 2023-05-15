@@ -3,7 +3,7 @@ ThatStella7922 Landing Website Stylesheet
 
 mreowww :3
 
-v2023.0430.0
+v2023.0515.0
 */
 
 /* small css reset because something was causing issues and im too dumb to figure out what it was */
@@ -17,22 +17,6 @@ body {
         -webkit-text-size-adjust: 100%;
     }
 }
-
-/* handles safe area for notched iphones 
-@supports(margin: max(0px)) {
-    body {
-        margin-left: max(0px, env(safe-area-inset-left));
-        margin-right: max(0px, env(safe-area-inset-right));
-    }
-}
-
-@supports(padding:max(0px)) {
-    body, header, footer, nav {
-        padding-left: min(0vmin, env(safe-area-inset-left));
-        padding-right: min(0vmin, env(safe-area-inset-right));
-    }
-}
-end of safe area handling for notched iphones */
 
 /* Styling for all device sizes */
 body {
@@ -56,7 +40,8 @@ a {
 
 #navigation {
     text-align: center;
-    background-image: url('https://thatstel.la/landing-assets/IMG2931-LQ2.jpg');
+    background-image: url('http://thatstel.la/landing-assets/IMG2931-LQ2.jpg');
+    background-image: url('//thatstel.la/landing-assets/IMG2931-LQ2.jpg');
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
