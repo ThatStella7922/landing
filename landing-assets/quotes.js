@@ -1,10 +1,17 @@
 /* 
-ThatStella7922 Landing Website 'quotes' Handler
+ThatStella7922 Landing Website "quotes" Handler
 No I didn't have a better name for it
 
 v2023.0515.0
 */
 
+// Globals
+const currentFullDate = new Date();
+var currentMonth = currentFullDate.getMonth() + 1;
+var currentDay = currentFullDate.getDate(); 
+// End Globals
+
+// Quotes
 const quotes = [
     "You've shown me light<br>You gave me wings to fly<br>And I will always be thankful", // from Butterfly by kmac2021
     "Stars can't shine without darkness", // from Fragile Truths by D.H. Sidebottom
@@ -17,23 +24,58 @@ const quotes = [
     "Indecisiveness and hesitation.<br>Avoid them both or you will always be filled with regret", // from myself
 ];
 
+function getRandomQuote() {
+  var quote = quotes[~~(Math.random() * quotes.length)];
+  return quote;
+}
+
 function setQuotesText() {
-    const currentFullDate = new Date();
-    const currentMonth = currentFullDate.getMonth() + 1;
-    console.log(currentMonth)
-  
-    switch (currentMonth) {
-      case 6:
-        var randomText = "Happy Pride Month! 🏳️‍🌈🏳️‍⚧️"
-      
-      default:
-        var randomText = quotes[~~(Math.random() * quotes.length)];
-    }
+  switch (currentMonth) {
+    // Switch statement for months, each month case can have a switch statement for days too
+    case 3:
+      switch (currentDay) {
+        case 23:
+          var quoteText = "Happy birthday to the girl that changed my life. Love you Eva!";
+          break;
+        default:
+          var quoteText = getRandomQuote();
+          break;
+      }
+      break;
 
-    console.log(randomText);
-}
+    case 6:
+      switch (currentDay) {
+        default:
+          var quoteText = "Happy Pride Month! 🏳️‍🌈 🏳️‍⚧️";
+          break;
+      }
+      break;
 
-function setQuotesTextTemp() {
-    var randomText = quotes[~~(Math.random() * quotes.length)];
-    document.getElementById('quotep').innerHTML = randomText;
+    case 7:
+      switch (currentDay) {
+        case 11:
+          var quoteText = "Stella's Birthday. Happy birthday to me";
+          break;
+        default:
+          var quoteText = getRandomQuote();
+          break;
+      }
+      break;
+
+    case 10:
+      switch (currentDay) {
+        default:
+          var quoteText = "Happy LGBTQ+ History Month!<br>(US/Canada/Australia)";
+          break;
+      }
+      break;
+
+    default:
+      var quoteText = getRandomQuote();
+      break;
+  }
+
+    //console.log("setQuotesText() returned the following string:\n" + randomText);
+    document.getElementById('quotep').innerHTML = quoteText;
 }
+// End Quotes
