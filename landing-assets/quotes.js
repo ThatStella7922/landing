@@ -2,7 +2,7 @@
 ThatStella7922 Landing Website "quotes" Handler
 No I didn't have a better name for it
 
-v2023.0515.0
+v2023.0623.0
 */
 
 // Globals
@@ -78,4 +78,11 @@ function setQuotesText() {
     //console.log("setQuotesText() returned the following string:\n" + randomText);
     document.getElementById('quotep').innerHTML = quoteText;
 }
+
+// SHHHH SECRET
+function manualSetQuotesText() {
+  manualQuote = prompt("Enter the quote you want to set:");
+  document.getElementById('quotep').innerHTML = manualQuote;
+}
+
 // End Quotes
