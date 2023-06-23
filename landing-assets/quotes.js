@@ -81,8 +81,10 @@ function setQuotesText() {
 
 // SHHHH SECRET
 function manualSetQuotesText() {
-  manualQuote = prompt("Enter the quote you want to set:");
-  document.getElementById('quotep').innerHTML = manualQuote;
+  manualQuote = prompt("You found the secret!\nEnter the desired quote text:", document.getElementById('quotep').innerHTML);
+  if (manualQuote != null) {
+    document.getElementById('quotep').innerHTML = manualQuote;
+  }
 }
 
 // End Quotes
