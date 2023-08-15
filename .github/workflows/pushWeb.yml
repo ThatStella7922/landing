@@ -8,12 +8,13 @@ jobs:
       - name: Get repo files
         uses: actions/checkout@v3
       - name: Update files on remote server
-        env:
+      - env:
           ssh_remote_ip: ${{ secrets.SSH_REMOTE_IP }}
           ssh_remote_port: ${{ secrets.SSH_REMOTE_PORT }}
           ssh_remote_user: ${{ secrets.SSH_REMOTE_USER }}
           SSHPASS: ${{ secrets.SSH_REMOTE_PW }}
-        run: |
+      - run: |
+          ssh-keyscan -H $ssh_remote_ip >> ~/.ssh/known_hosts
           sshpass -e sftp -P $ssh_remote_port $ssh_remote_user@$ssh_remote_ip:/home/u464711639/domains/thatstel.la/public_html/ <<< $'put /home/runner/work/landing/landing/index.html'
           sshpass -e sftp -P $ssh_remote_port $ssh_remote_user@$ssh_remote_ip:/home/u464711639/domains/thatstel.la/public_html/files/hidden/css/ <<< $'put /home/runner/work/landing/landing/landing-styleshit.css'
           sshpass -e sftp -P $ssh_remote_port $ssh_remote_user@$ssh_remote_ip:/home/u464711639/domains/thatstel.la/public_html/ <<< $'put /home/runner/work/landing/landing/landing-assets/'
