@@ -21,5 +21,5 @@ jobs:
           echo "Now connecting and transferring"
           sshpass -e sftp -P $ssh_remote_port $ssh_remote_user@$ssh_remote_ip:/home/u464711639/domains/thatstel.la/public_html/ <<< $'put /home/runner/work/landing/landing/index.html'
           sshpass -e sftp -P $ssh_remote_port $ssh_remote_user@$ssh_remote_ip:/home/u464711639/domains/thatstel.la/public_html/files/hidden/css/ <<< $'put /home/runner/work/landing/landing/landing-styleshit.css'
-          sshpass -e sftp -P $ssh_remote_port $ssh_remote_user@$ssh_remote_ip:/home/u464711639/domains/thatstel.la/public_html/ <<< $'put /home/runner/work/landing/landing/landing-assets/'
+          sshpass -e sftp -P $ssh_remote_port $ssh_remote_user@$ssh_remote_ip:/home/u464711639/domains/thatstel.la/public_html/ <<< $'put -r /home/runner/work/landing/landing/landing-assets/'
           echo "Commands finished"
