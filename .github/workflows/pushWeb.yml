@@ -5,12 +5,14 @@ jobs:
   copy-files:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - env:
+      - name: repo
+        uses: actions/checkout@v3
+      - name: sftp
+        env:
           ssh_remote_ip: ${{ secrets.SSH_REMOTE_IP }}
           ssh_remote_port: ${{ secrets.SSH_REMOTE_PORT }}
           ssh_remote_user: ${{ secrets.SSH_REMOTE_USER }}
           ssh_remote_pw: ${{ secrets.SSH_REMOTE_PW }}
-      - run: |
+        run: |
           ls ${{ github.workspace }}
            sshpass -p $ssh_remote_pw ssh -p $ssh_remote_port -t $ssh_remote_user@$ssh_remote_ip 'uname -a'
