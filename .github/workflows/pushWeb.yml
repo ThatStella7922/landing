@@ -12,7 +12,7 @@ jobs:
           ssh_remote_ip: ${{ secrets.SSH_REMOTE_IP }}
           ssh_remote_port: ${{ secrets.SSH_REMOTE_PORT }}
           ssh_remote_user: ${{ secrets.SSH_REMOTE_USER }}
-          ssh_remote_pw: ${{ secrets.SSH_REMOTE_PW }}
+          SSHPASS: ${{ secrets.SSH_REMOTE_PW }}
         run: |
           ls ${{ github.workspace }}
-           sshpass -t $ssh_remote_pw ssh -p $ssh_remote_port -t $ssh_remote_user@$ssh_remote_ip 'uname -a'
+           sshpass -e ssh -p $ssh_remote_port -t $ssh_remote_user@$ssh_remote_ip 'uname -a'
