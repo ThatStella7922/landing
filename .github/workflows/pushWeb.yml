@@ -15,4 +15,4 @@ jobs:
           SSHPASS: ${{ secrets.SSH_REMOTE_PW }}
         run: |
           ls ${{ github.workspace }}
-           sshpass -e ssh -p $ssh_remote_port -t $ssh_remote_user@$ssh_remote_ip 'uname -a'
+           sshpass -e ssh -p $ssh_remote_port -tt $ssh_remote_user@$ssh_remote_ip 'uname -a'
