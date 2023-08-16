@@ -3,7 +3,7 @@ ThatStella7922 Landing Website Stylesheet
 
 mreowww :3
 
-v2023.0718.0
+v2023.0815.0
 */
 
 /* small css reset because something was causing issues and im too dumb to figure out what it was */
@@ -28,17 +28,12 @@ a {
     color:#E872E2;
 }
 
-#verticalcontainer {
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    height: 100%;
-    width: 100%;
+p {
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
-#navigation {
+#master {
     text-align: center;
     background-image: url('http://thatstel.la/landing-assets/IMG2360.jpg');
     background-image: url('//thatstel.la/landing-assets/IMG2360.jpg');
@@ -53,33 +48,57 @@ a {
     height: 100%;
 }
 
+#verticalcontainer {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    flex-direction: column;
+    min-height: 100vh;
+    height: 100%;
+    width: calc(100% - env(safe-area-inset-right) - env(safe-area-inset-left));
+    padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left);
+}
+
 /* Styling for the main ThatStella7922 text */
-#navigation #verticalcontainer #horizontalcontainer #displayname {
-    font-size: 38px;
+#master #displayname {
+    font-size: 42px;
     font-weight: 300;
     margin: 20px 0 20px 0;
     color: #ffffff
 }
 
-/* Maximum width for the social links div */
-/* This is done so that the social links don't span across the entire width of the viewport in the case of a wide viewport */
-#navigation #horizontalcontainer .social-links {
+/* Move the ThatStella7922 text down */
+#master #verticalcontainer #textabovelinks {
+    margin-top: 15vh;
+}
+
+/*
+
+Links Styling
+
+*/
+/* Maximum width for the social link buttons div */
+/* This is done so that the social link buttons don't span across the entire width of the viewport in the case of a wide viewport */
+#master #horizontalcontainer .social-links .social-link-buttons {
     max-width: 600px;
+    display: inline-block;
 }
 /* Arrangement for the social links */
-#navigation #horizontalcontainer .social-links form {
+#master #horizontalcontainer .social-links form {
     list-style: none;
     padding: 0;
     margin: auto;
     display: inline-block;
 }
 /* Arrangement for the social section label */
-#navigation #horizontalcontainer .social-links .social-links-label {
+#master #horizontalcontainer .social-links .social-links-label {
     margin-top: 5vh;
     margin-bottom: 0;
 }
 /* Styling for the social links */
-#navigation #verticalcontainer #horizontalcontainer .social-links form button {
+#master #verticalcontainer #horizontalcontainer .social-links form button {
     background-color: transparent;
     border: none;
     color: white;
@@ -91,13 +110,13 @@ a {
 }
 
 /* Arrangement for the website buttons */
-#navigation #horizontalcontainer .links form {
+#master #horizontalcontainer .links form {
     padding: 0;
     margin: auto;
     display: inline-block;
 }
 /* Styling for the website link buttons (buttons pt2) */
-#navigation #verticalcontainer #horizontalcontainer .links form button {
+#master #verticalcontainer #horizontalcontainer .links form button {
     /* basically make a button */
     background-color: #E872E2;
     border-radius: 25px;
@@ -110,6 +129,26 @@ a {
     font-size: 100%;
 }
 
+/*
+
+About Styling
+
+*/
+/* Maximum width for the about div */
+/* This is done so that the about section doesn't span across the entire width of the viewport in the case of a wide viewport */
+#master #verticalcontainer #about #about-text {
+    max-width: 600px;
+    display: inline-block;
+}
+/* Styling for the about heading */
+#master #verticalcontainer #about #about-heading {
+    margin-top: 7vh;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+/* Footer */
 footer {
     text-align: center;
     color: #000000;
@@ -120,10 +159,10 @@ img.emoji {
     height: 1.1em;
     width: 1.1em;
     vertical-align: -0.2em;
- }
+}
 
 /* Fallback CSS for devices that don't support the "fancier" stuff below with translucency and blurs */
-#verticalcontainer {
+#master {
     /* fallback to plain black */
     background-color: rgb(0, 0, 0);
     /* Translucent black if the browser supports it */
@@ -141,8 +180,8 @@ img.emoji {
     #verticalcontainer {
         /* Blur the background */
         background-color: rgba(0, 0, 0, 0.15);
-        -webkit-backdrop-filter: blur(6px);
-        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(9px);
+        backdrop-filter: blur(9px);
     }
     
     #backdrop-warning {
@@ -150,19 +189,45 @@ img.emoji {
     }
 }
   
-/* Media query for screens wider than 768px */
-@media screen and (min-width: 768px) {
-    #navigation #verticalcontainer #horizontalcontainer #displayname {
-        font-size: 52px;
+/* Media query for screens wider than 800px */
+@media screen and (min-width: 800px) {
+    #master #verticalcontainer #displayname {
+        font-size: 62px;
+    }
+
+    #horizontalcontainer {
+        display: inline-flex;
+    }
+
+    /* Pad and ensure consistent size of the two divs */
+    #master #verticalcontainer #horizontalcontainer #navigation {
+        max-width: 50vw;
+        padding-right: 15px;
+    }
+    #master #verticalcontainer #horizontalcontainer #about {
+        max-width: 50vw;
+        padding-right: 15px;
+    }
+
+    /* Move the ThatStella7922 text down and add equal bottom margin */
+    #master #verticalcontainer #textabovelinks {
+        margin-top: 5vh;
+    }
+    #master #verticalcontainer #horizontalcontainer #about {
+        margin-bottom: 5vh;
+    }
+
+    /* Left align the about heading on big screens */
+    #master #verticalcontainer #about #about-heading {
+        margin-top: 0;
+        text-align: left;
     }
 }
 
-/* Media query for small (phone) screens */
-@media screen and (max-width: 420px) {
-    #navigation #verticalcontainer #horizontalcontainer {
-    transform: translateY(-1vh);
-    }
-}
+/* Media query for (phone) screens
+@media screen and (max-width: 460px) {
+    
+}*/
 
 /* dark mode styling! */
 @media (prefers-color-scheme: dark) {
