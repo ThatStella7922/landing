@@ -1,14 +1,16 @@
 # [Stella's Landing Site](https://thatstel.la)
-- Index HTML v2023.0816.0
+- Index HTML v2023.0822.0
   - Main page structure
-- Stylesheet v2023.0815.0
+- Stylesheet v2023.0822.0
   - Styling, blurs, layout
-- Quotes JavaScript v2023.0816.0
+- Quotes JavaScript v2023.0822.0
   - Handles quotes text under the nav buttons, sometimes does other messages
 - .htaccess v2023.0411.0
   - Rewrites `http://thatstel.la/mailto.html` to a mailto: URI (could be done better but this works)
 - IMG2360.jpg
   - Background image, shot by me
+
+As always, file history in the commits.
 
 ## About
 This site was born from the basic visual design of my [old landing site](https://github.com/ThatStella7922/old-landing-tng) which was essentially just someone else's site but modified to show my name, socials and background image.

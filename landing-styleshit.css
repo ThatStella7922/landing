@@ -79,9 +79,9 @@ p {
 Links Styling
 
 */
-/* Maximum width for the social link buttons div */
-/* This is done so that the social link buttons don't span across the entire width of the viewport in the case of a wide viewport */
-#master #horizontalcontainer .social-links .social-link-buttons {
+/* Maximum width for the social link div */
+/* This is done so that the social link buttons and quotes text don't span across the entire width of the viewport in the case of a wide viewport */
+#master #horizontalcontainer .social-links {
     max-width: 600px;
     display: inline-block;
 }
