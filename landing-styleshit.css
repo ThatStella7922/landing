@@ -3,7 +3,7 @@ ThatStella7922 Landing Website Stylesheet
 
 mreowww :3
 
-v2023.0815.0
+v2023.0918.0
 */
 
 /* small css reset because something was causing issues and im too dumb to figure out what it was */
@@ -35,8 +35,8 @@ p {
 
 #master {
     text-align: center;
-    background-image: url('http://thatstel.la/landing-assets/IMG2360.jpg');
-    background-image: url('//thatstel.la/landing-assets/IMG2360.jpg');
+    background-image: url('http://thatstel.la/landing-assets/IMG4036.jpg');
+    background-image: url('//thatstel.la/landing-assets/IMG4036.jpg');
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -228,6 +228,32 @@ img.emoji {
 @media screen and (max-width: 460px) {
     
 }*/
+
+/* Media query to do XDR on capable Apple devices */
+@media screen and (color-gamut: p3) {
+    @supports (-webkit-backdrop-filter: brightness()) {
+        .xdr-max {
+            -webkit-backdrop-filter: brightness(1);
+            filter:brightness(2.0)
+        }
+        .xdr-high {
+            -webkit-backdrop-filter: brightness(1);
+            filter:brightness(1.75)
+        }
+        .xdr-med {
+            -webkit-backdrop-filter: brightness(1);
+            filter:brightness(1.5)
+        }
+        .xdr-low {
+            -webkit-backdrop-filter: brightness(1);
+            filter:brightness(1.25)
+        }
+        .xdr-lowest {
+            -webkit-backdrop-filter: brightness(1);
+            filter:brightness(1.1)
+        }
+    }
+}
 
 /* dark mode styling! */
 @media (prefers-color-scheme: dark) {
