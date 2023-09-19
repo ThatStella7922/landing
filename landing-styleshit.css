@@ -3,7 +3,7 @@ ThatStella7922 Landing Website Stylesheet
 
 mreowww :3
 
-v2023.0918.2
+v2023.0918.3
 */
 
 /* small css reset because something was causing issues and im too dumb to figure out what it was */
@@ -35,7 +35,8 @@ p {
 
 #master {
     text-align: center;
-    background-image: url('landing-assets/IMG4036.jpg');
+    background-image: url('http://thatstel.la/landing-assets/IMG4036.jpg');
+    background-image: url('//thatstel.la/landing-assets/IMG4036.jpg');
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;

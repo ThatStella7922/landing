@@ -3,7 +3,7 @@ ThatStella7922 Landing Website EDR Handler
 
 This doesn't actually do anything useful, it just has a function for blinding the user lmfao
 
-v2023.0918.1
+v2023.0918.3
 */
 
 function promptSetMaxEDRBrightness() {

@@ -1,11 +1,11 @@
 # [Stella's Landing Site](https://thatstel.la)
-- Index HTML v2023.0918.1
+- Index HTML v2023.0918.3
   - Main page structure
-- Stylesheet v2023.0918.1
+- Stylesheet v2023.0918.3
   - Styling, blurs, layout
 - Quotes JavaScript v2023.0822.0
   - Handles quotes text under the nav buttons, sometimes does other messages
-- XDR JavaScript v2023.0918.1
+- EDR JavaScript v2023.0918.3
   - Doesn't do anything useful and instead lets the user blind themselves
 - .htaccess v2023.0411.0
   - Rewrites `http://thatstel.la/mailto.html` to a mailto: URI (could be done better but this works)
