@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- Stella's Landing Site 
-v2023.0918.0
+v2023.0918.1
 
 https://github.com/ThatStella7922/landing
 
@@ -12,7 +12,7 @@ Uses Font Awesome icons, Google Fonts and Twitter Twemoji.
   <head>
     <meta charset="utf-8">
     <title>Stella's Landing Site</title>
-    <link rel="stylesheet" href="//files.thatstel.la/hidden/css/landing-styleshit.css?version=202309180">
+    <link rel="stylesheet" href="//files.thatstel.la/hidden/css/landing-styleshit.css?version=202309181">
     <!--<link rel="stylesheet" href="landing-styleshit.css">-->
  	<link rel="shortcut icon" href="landing-assets/favicon.ico" type="image/x-icon">
  	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi, viewport-fit=cover"/>
@@ -27,6 +27,7 @@ Uses Font Awesome icons, Google Fonts and Twitter Twemoji.
 
 	<!-- Quotes JavaScript -->
 	<script src="landing-assets/quotes.js?version=202308220"></script>
+	<script src="landing-assets/xdr.js?version=202309181"></script>
  	
  	<!-- Fonts --> 	
  	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,7 +44,7 @@ Uses Font Awesome icons, Google Fonts and Twitter Twemoji.
   			<div id="horizontalcontainer">
   			
   				<div id="navigation">
-  					<div class="links xdr-low">
+  					<div id="navigation-buttons" class="links xdr-low">
   						<form><button type="submit" formaction="https://blog.thatstel.la">Blog</button></form>
   						<form><button type="submit" formaction="https://files.thatstel.la">File Store</button></form>
   						<form><button type="submit" formaction="https://software.thatstel.la">Software Site</button></form>
@@ -52,7 +53,7 @@ Uses Font Awesome icons, Google Fonts and Twitter Twemoji.
   					<div class="social-links">
   						<p id="quotep"></p>
   						<p class="social-links-label">More:</p>
-  						<div class="social-link-buttons xdr-low">
+  						<div id="social-link-buttons-id" class="social-link-buttons xdr-low">
   							<form><button type="submit" formaction="https://thatstel.la/mailto.html"><i class="fa-solid fa-envelope"></i><br>Email</button></form>
   							<form><button type="submit" formaction="https://github.com/ThatStella7922"><i class="fa-brands fa-github"></i><br>GitHub</button></form>
   							<form><button type="submit" formaction="https://discord.thatstel.la"><i class="fa-brands fa-discord"></i><br>Fruitycord</button></form>
@@ -87,7 +88,10 @@ Uses Font Awesome icons, Google Fonts and Twitter Twemoji.
   	</main>
   	
   	<footer>
-  		<p onclick="manualSetQuotesText()">ThatStella7922 - v2023.0918.0</p>
+  		<div id="footer-sidebyside">
+  			<p onclick="manualSetQuotesText()">ThatStella7922 - v2023.0918.1</p>
+  			<p id="xdr-enable" onclick="promptSetMaxXDRBrightness()"><strong>now supports XDR!</strong></sub>
+  		</div>
   	</footer>
   	
   </body>

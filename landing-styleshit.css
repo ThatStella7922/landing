@@ -3,7 +3,7 @@ ThatStella7922 Landing Website Stylesheet
 
 mreowww :3
 
-v2023.0918.0
+v2023.0918.1
 */
 
 /* small css reset because something was causing issues and im too dumb to figure out what it was */
@@ -153,6 +153,9 @@ footer {
     text-align: center;
     color: #000000;
 }
+#footer-sidebyside {
+    display: block;
+}
 
 /* Twemoji sizing */
 img.emoji {
@@ -221,6 +224,11 @@ img.emoji {
     #master #verticalcontainer #about #about-heading {
         margin-top: 0;
         text-align: left;
+    }
+
+    /* Allow elements in the footer to sit side by side */
+    #footer-sidebyside {
+        display: inline-flex;
     }
 }
 
