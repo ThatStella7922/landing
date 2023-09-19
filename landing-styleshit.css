@@ -3,7 +3,7 @@ ThatStella7922 Landing Website Stylesheet
 
 mreowww :3
 
-v2023.0918.1
+v2023.0918.2
 */
 
 /* small css reset because something was causing issues and im too dumb to figure out what it was */
@@ -35,8 +35,7 @@ p {
 
 #master {
     text-align: center;
-    background-image: url('http://thatstel.la/landing-assets/IMG4036.jpg');
-    background-image: url('//thatstel.la/landing-assets/IMG4036.jpg');
+    background-image: url('landing-assets/IMG4036.jpg');
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -237,28 +236,39 @@ img.emoji {
     
 }*/
 
-/* Media query to do XDR on capable Apple devices */
-@media screen and (color-gamut: p3) {
+
+/* Media query to do EDR on capable devices
+
+For now, the effect only seems to work properly on WebKit browsers running on Apple OSes so I've limited it to only WebKit.
+*/
+#edr-enable {
+    display: none;
+}
+@media screen and (dynamic-range: high) {
     @supports (-webkit-backdrop-filter: brightness()) {
-        .xdr-max {
+        .edr-max {
             -webkit-backdrop-filter: brightness(1);
             filter:brightness(2.0)
         }
-        .xdr-high {
+        .edr-high {
             -webkit-backdrop-filter: brightness(1);
             filter:brightness(1.75)
         }
-        .xdr-med {
+        .edr-med {
             -webkit-backdrop-filter: brightness(1);
             filter:brightness(1.5)
         }
-        .xdr-low {
+        .edr-low {
             -webkit-backdrop-filter: brightness(1);
             filter:brightness(1.25)
         }
-        .xdr-lowest {
+        .edr-lowest {
             -webkit-backdrop-filter: brightness(1);
             filter:brightness(1.1)
+        }
+
+        #edr-enable {
+            display: block;
         }
     }
 }
