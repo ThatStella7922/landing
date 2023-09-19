@@ -7,7 +7,7 @@ v2023.0918.1
 */
 
 function promptSetMaxXDRBrightness() {
-  xdrBrightnessPrompt = confirm("Enable max XDR brightness for all elements on the page?\nThis will be very bright on capable displays!");
+  xdrBrightnessPrompt = confirm("Enable maximum XDR brightness for all elements on the page? The page already has some subtle XDR elements!\nOn capable displays, this will be extremely bright. Otherwise, it'll clip to white.\nAdditionally, the XDR stuff is supported on WebKit-based browsers like Safari.");
   if (xdrBrightnessPrompt) {
     // set max xdr on everything
     document.getElementById("verticalcontainer").className = "xdr-max";
