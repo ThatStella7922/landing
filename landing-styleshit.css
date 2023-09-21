@@ -3,7 +3,7 @@ ThatStella7922 Landing Website Stylesheet
 
 mreowww :3
 
-v2023.0918.3
+v2023.0921.0
 */
 
 /* small css reset because something was causing issues and im too dumb to figure out what it was */
@@ -25,7 +25,7 @@ body {
 }
 
 a {
-    color:#E872E2;
+    color: #9c0c0c;
 }
 
 p {
