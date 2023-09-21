@@ -3,7 +3,7 @@ ThatStella7922 Landing Website Stylesheet
 
 mreowww :3
 
-v2023.0921.0
+v2023.0921.1
 */
 
 /* small css reset because something was causing issues and im too dumb to figure out what it was */
@@ -43,7 +43,7 @@ p {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    border-bottom: 4px solid #E872E2;
+    border-bottom: 4px solid #9c0c0c;
     min-height: 100vh;
     height: 100%;
 }
@@ -118,7 +118,7 @@ Links Styling
 /* Styling for the website link buttons (buttons pt2) */
 #master #verticalcontainer #horizontalcontainer .links form button {
     /* basically make a button */
-    background-color: #E872E2;
+    background-color: #9c0c0c;
     border-radius: 25px;
     border: none;
     color: white;
