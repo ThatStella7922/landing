@@ -30,4 +30,5 @@ I appreciate suggestions and new ideas for this website, as it's what most peopl
 - [Twitter Twemoji](https://github.com/twitter/twemoji)
 
 ---
-<sub>With 💜 from Stella</sub>
+<sub>With 💜 from Stella</sub></br>
+<sub>shit says `<sub>` down here?? i thought i was the sub! - eva</sub>
