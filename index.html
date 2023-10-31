@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- Stella's Landing Site 
-v2023.0921.1
+v2023.1030.0
 
 https://github.com/ThatStella7922/landing
 
@@ -12,7 +12,7 @@ Uses Font Awesome icons, Google Fonts and Twitter Twemoji.
   <head>
     <meta charset="utf-8">
     <title>Stella's Landing Site</title>
-    <link rel="stylesheet" href="//files.thatstel.la/hidden/css/landing-styleshit.css?version=202309211">
+    <link rel="stylesheet" href="//files.thatstel.la/hidden/css/landing-styleshit.css?version=202310300">
     <!--<link rel="stylesheet" href="landing-styleshit.css">-->
  	<link rel="shortcut icon" href="landing-assets/favicon.ico" type="image/x-icon">
  	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi, viewport-fit=cover"/>
@@ -28,6 +28,7 @@ Uses Font Awesome icons, Google Fonts and Twitter Twemoji.
 	<!-- Quotes JavaScript -->
 	<script src="landing-assets/quotes.js?version=202308220"></script>
 	<script src="landing-assets/edr.js?version=202309182"></script>
+	<script src="landing-assets/cat.js?version=202310300"></script>
  	
  	<!-- Fonts --> 	
  	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -38,8 +39,10 @@ Uses Font Awesome icons, Google Fonts and Twitter Twemoji.
   	<div id="master">
   		<div id="verticalcontainer">
   			<div id="textabovelinks" class="edr-med">
-  				<p id="displayname">ThatStella7922</p>
+  				<p id="displayname" onclick="promptShowCat()">ThatStella7922</p>
   			</div>
+  			
+  			<p id="backdrop-warning">Your browser doesn't support backdrop effects which is why the background image isn't blurred or is hidden.</p>
   			
   			<div id="horizontalcontainer">
   			
@@ -65,9 +68,6 @@ Uses Font Awesome icons, Google Fonts and Twitter Twemoji.
   							<form><button type="submit" formaction="https://cash.app/$ThatStella7922"><i class="fa-solid fa-dollar-sign"></i><br>CashApp</button></form>
   						</div>
   					</div>
-  				
-  					<p id="backdrop-warning">Your browser doesn't support backdrop effects which is why the background image isn't blurred or is hidden.</p>
-
   				</div>
   				
   				<div id="about">
@@ -77,19 +77,27 @@ Uses Font Awesome icons, Google Fonts and Twitter Twemoji.
   						<p>Hey everyone, my name is Stella. I'm a passionate technology enthusiast, working with all sorts of technologies from PHP to Python to Swift. I also enjoy working with hardware and networking, having built several PCs, designing small electronics projects of my own and hosting my own services on a home server.</p>
   						<p>My main goal is to help improve other people's lives, and I enjoy creating new things and meeting new people. Consider joining Fruitycord to talk to me and meet some of the great people I've met along my journey!</p>
   					</div>
-  				</div>	
+  				</div>  	
   				
+  				<div id="catvideo">
+  					<div id="catvideo-container">
+    					<video controls loop id="catvideo-element">
+    					<source src="//files.thatstel.la/media/important-videos/theCat.mp4" type="video/mp4"/>
+    					Your browser does not support the cat video present here.
+    					</video>
+    				</div>
+				</div>	
+						
   			</div>
   		</div>
   	</div>
-  		
   		
   	<main>
   	</main>
   	
   	<footer>
   		<div id="footer-sidebyside">
-  			<p onclick="manualSetQuotesText()">ThatStella7922 - v2023.0921.1</p>
+  			<p onclick="manualSetQuotesText()">ThatStella7922 - v2023.1030.0</p>
   			<p class="edr-max" id="edr-enable" onclick="promptSetMaxEDRBrightness()"><strong>EDR Supported</strong></sub></p> <!-- only visible on EDR displays in WebKit -->
   		</div>
   	</footer>

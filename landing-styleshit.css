@@ -3,7 +3,7 @@ ThatStella7922 Landing Website Stylesheet
 
 mreowww :3
 
-v2023.0921.1
+v2023.1030.0
 */
 
 /* small css reset because something was causing issues and im too dumb to figure out what it was */
@@ -147,6 +147,28 @@ About Styling
     font-weight: bold;
 }
 
+/*
+
+Cat Video Styling
+
+*/
+#master #verticalcontainer #catvideo {
+    max-width: 600px;
+    max-height: 600px;
+    display: none;
+    overflow: hidden;
+}
+
+#master #verticalcontainer #catvideo-container {
+    height: 50vh;
+}
+
+#master #verticalcontainer #catvideo video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
 
 /* Footer */
 footer {
@@ -202,12 +224,17 @@ img.emoji {
         display: inline-flex;
     }
 
-    /* Pad and ensure consistent size of the two divs */
+    /* Pad and ensure consistent size of the three divs */
     #master #verticalcontainer #horizontalcontainer #navigation {
         max-width: 50vw;
         padding-right: 15px;
     }
     #master #verticalcontainer #horizontalcontainer #about {
+        max-width: 50vw;
+        padding-right: 15px;
+    }
+
+    #master #verticalcontainer #horizontalcontainer #catvideo {
         max-width: 50vw;
         padding-right: 15px;
     }
@@ -231,11 +258,6 @@ img.emoji {
         display: inline-flex;
     }
 }
-
-/* Media query for (phone) screens
-@media screen and (max-width: 460px) {
-    
-}*/
 
 
 /* Media query to do EDR on capable devices
