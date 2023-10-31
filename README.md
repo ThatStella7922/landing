@@ -7,7 +7,7 @@
   - Handles quotes text under the nav buttons, sometimes does other messages
 - EDR JavaScript v2023.0918.3
   - Doesn't do anything useful and instead lets the user blind themselves
-- Cat JavaScript v2023.1030.0
+- Cat JavaScript v2023.1030.1
   - Handles showing the cat video on the website
 - .htaccess v2023.0411.0
   - Rewrites `http://thatstel.la/mailto.html` to a mailto: URI (could be done better but this works)
