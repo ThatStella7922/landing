@@ -25,7 +25,7 @@ body {
 }
 
 a {
-    color: #9c0c0c;
+    color: #e872e2;
 }
 
 p {
@@ -33,8 +33,12 @@ p {
     padding-right: 10px;
 }
 
-#master {
-    text-align: center;
+body:before {
+    z-index: -9; /* Appear under everything */
+    content: '';
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
     background-image: url('http://thatstel.la/landing-assets/IMG4036.jpg');
     background-image: url('//thatstel.la/landing-assets/IMG4036.jpg');
     -webkit-background-size: cover;
@@ -43,7 +47,12 @@ p {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    border-bottom: 4px solid #9c0c0c;
+}
+
+#master {
+    z-index: 1;
+    text-align: center;
+    border-bottom: 4px solid #e872e2;
     min-height: 100vh;
     height: 100%;
 }
@@ -118,7 +127,7 @@ Links Styling
 /* Styling for the website link buttons (buttons pt2) */
 #master #verticalcontainer #horizontalcontainer .links form button {
     /* basically make a button */
-    background-color: #9c0c0c;
+    background-color: #e872e2;
     border-radius: 25px;
     border: none;
     color: white;
@@ -171,7 +180,7 @@ Cat Video Styling
 /* Styling for the cat video play/pause button */
 #master #verticalcontainer #catvideo #catbuttons-container button {
     /* basically make a button */
-    background-color: #9c0c0c;
+    background-color: #e872e2;
     border-radius: 25px;
     border: none;
     color: white;
@@ -185,8 +194,9 @@ Cat Video Styling
 
 /* Footer */
 footer {
+    z-index: 2;
     text-align: center;
-    color: #000000;
+    background-color: #1a1a1a;
 }
 #footer-sidebyside {
     display: block;
@@ -213,13 +223,20 @@ img.emoji {
     font-size: 14px;
 }
 
-/* This media query checks if the browser does support image effects */
-@supports ((-webkit-backdrop-filter: blur(6px)) or (backdrop-filter: blur(6px))) {
-    #verticalcontainer {
-        /* Blur the background */
-        background-color: rgba(0, 0, 0, 0.15);
-        -webkit-backdrop-filter: blur(9px);
-        backdrop-filter: blur(9px);
+/* This media query checks if the browser does the blur filter */
+@supports ((-webkit-filter: blur(9px)) or (-moz-filter: blur(9px)) or (-o-filter: blur(9px)) or (-ms-filter: blur(9px)) or (filter: blur(9px))) {
+    #master {
+        /* Unset fallback from above */
+        background-color: initial;
+    }
+
+    body:before {
+        /*Blur the background*/
+        -webkit-filter: blur(9px) brightness(0.85);
+        -moz-filter: blur(9px) brightness(0.85);
+        -o-filter: blur(9px) brightness(0.85);
+        -ms-filter: blur(9px) brightness(0.85);
+        filter: blur(9px) brightness(0.85);
     }
     
     #backdrop-warning {
@@ -317,12 +334,12 @@ For now, the effect only seems to work properly on WebKit browsers running on Ap
         color:#FFFFFF;
     }
 
-    footer {
-        color: #ffffff;
-    }
-
     /* Make the image darker */
-    #verticalcontainer {
-        background-color: rgba(0, 0, 0, 0.60);
+    body:before {
+        -webkit-filter: blur(9px) brightness(0.4);
+        -moz-filter: blur(9px brightness(0.4));
+        -o-filter: blur(9px) brightness(0.4);
+        -ms-filter: blur(9px) brightness(0.4);
+        filter: blur(9px) brightness(0.4);
     }
 }
