@@ -1,7 +1,7 @@
 # [Stella's Landing Site](https://thatstel.la)
-- Index HTML v2023.1128.0
+- Index HTML v2023.1128.1
   - Main page structure
-- Stylesheet v2023.1128.0
+- Stylesheet v2023.1128.1
   - Styling, blurs, layout
 - Quotes JavaScript v2023.0822.0
   - Handles quotes text under the nav buttons, sometimes does other messages

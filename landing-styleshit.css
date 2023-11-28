@@ -3,7 +3,7 @@ ThatStella7922 Landing Website Stylesheet
 
 mreowww :3
 
-v2023.1128.0
+v2023.1128.1
 */
 
 /* small css reset because something was causing issues and im too dumb to figure out what it was */
@@ -308,7 +308,7 @@ For now, the effect only seems to work properly on WebKit browsers running on Ap
 #edr-enable {
     display: none;
 }
-#xdr-video {
+#edr-video {
     display: none;
 }
 @media screen and (dynamic-range: high) {
