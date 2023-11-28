@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- Stella's Landing Site 
-v2023.1128.1
+v2023.1128.2
 
 https://github.com/ThatStella7922/landing
 
@@ -12,7 +12,7 @@ Uses Font Awesome icons, Google Fonts and Twitter Twemoji.
   <head>
     <meta charset="utf-8">
     <title>Stella's Landing Site</title>
-    <link rel="stylesheet" href="//files.thatstel.la/hidden/css/landing-styleshit.css?version=202311281">
+    <link rel="stylesheet" href="//files.thatstel.la/hidden/css/landing-styleshit.css?version=202311282">
     <!--<link rel="stylesheet" href="landing-styleshit.css">-->
  	<link rel="shortcut icon" href="landing-assets/favicon.ico" type="image/x-icon">
  	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi, viewport-fit=cover"/>
@@ -33,6 +33,7 @@ Uses Font Awesome icons, Google Fonts and Twitter Twemoji.
 	<script src="landing-assets/quotes.js?version=202308220"></script>
 	<script src="landing-assets/edr.js?version=202309182"></script>
 	<script src="landing-assets/cat.js?version=202311190"></script>
+	<script src="landing-assets/contentview.js?version=202311282"></script>
  	
  	<!-- Fonts --> 	
  	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -66,6 +67,11 @@ Uses Font Awesome icons, Google Fonts and Twitter Twemoji.
   				<p id="displayname" onclick="promptShowCat()">ThatStella7922</p>
   			</div>
   			
+			<noscript>
+				<div id="noscript-warning">
+					<p>JavaScript is disabled on your browser. This site requires JavaScript for proper functionality.</p>
+				</div>
+			</noscript>
   			<p id="backdrop-warning">Your browser doesn't support backdrop effects which is why the background image isn't blurred or is hidden.</p>
   			
   			<div id="horizontalcontainer">
@@ -93,14 +99,25 @@ Uses Font Awesome icons, Google Fonts and Twitter Twemoji.
   						</div>
   					</div>
   				</div>
-  				
-  				<div id="about">
-  					<p id="about-heading" class="edr-low">About</p>
-  				
-  					<div id="about-text">
-  						<p>Hey everyone, my name is Stella. I'm a passionate technology enthusiast, working with all sorts of tech. From PHP, Python, Swift and more languages to installing Windows on Android phones, to doing amateur audio mixing, I do a bit of everything. I also enjoy working with hardware and networking, having built several PCs, designing small electronics projects of my own and hosting my own services on a home server.</p>
-  						<p>My main goal is to help improve other people's lives, and I enjoy creating new things and meeting new people. Consider joining Fruitycord to talk to me and meet some of the great people I've met along my journey!</p>
-  					</div>
+
+  				<div id="contentview-container">
+					<div id="contentview-headings">
+  						<p id="contentview-about-heading" class="edr-low contentview-selected" onclick="selectItem('contentview-about')">About</p>
+						<p id="contentview-projects-heading" class="edr-low contentview-selected" onclick="selectItem('contentview-projects')">Projects</p>
+					</div>
+
+					<div id="contentview-items">
+						<div id="contentview-about-content">
+							<p>Hey everyone, my name is Stella. I'm a passionate technology enthusiast, working with all sorts of tech. From PHP, Python, Swift and more languages to installing Windows on Android phones, to doing amateur audio mixing, I do a bit of everything. I also enjoy working with hardware and networking, having built several PCs, designing small electronics projects of my own and hosting my own services on a home server.</p>
+							<p>My main goal is to help improve other people's lives, and I enjoy creating new things and meeting new people. Consider joining Fruitycord to talk to me and meet some of the great people I've met along my journey!</p>
+						</div>
+
+						<div id="contentview-projects-content">
+							<p><a href="https://software.thatstel.la/software/crossplatform-apps/battery-webhook">Battery Webhook</a> is my flagship project, allowing you to send your battery info to popular services using webhooks. It's a modern Swift+SwiftUI app built from the ground up with source available on <a href="https://github.com/ThatStella7922/battery-webhook">GitHub</a>, it supports automations on iOS and macOS and is primed for a 1.0 release soon!</p>
+							<p><b>This landing page</b> is another big project of mine, having been written from the ground up with <b>pure</b> HTML, CSS and JavaScript. It's the most performant and lightweight webpage I've ever made, and retains its functionality on legacy devices. It has documentation and source available on <a href="https://github.com/ThatStella7922/landing">GitHub</a>.</p>
+							<p>I also often work on smaller projects, like the code-side of my <a href="https://github.com/ThatStella7922/blog">blog</a>, my Discord bot called <a href="https://github.com/ThatStella7922/astral">astral</a>, and command-line uwuifying utility called <a href="https://github.com/ThatStella7922/uwufile">uwufile</a>.</p>
+						</div>
+					</div>
   				</div>  	
   				
   				<div id="catvideo">
@@ -123,13 +140,14 @@ Uses Font Awesome icons, Google Fonts and Twitter Twemoji.
   	
   	<footer>
   		<div id="footer-sidebyside">
-  			<p onclick="manualSetQuotesText()">ThatStella7922 - v2023.1128.1</p>
+  			<p onclick="manualSetQuotesText()">ThatStella7922 - v2023.1128.2</p>
   			<p class="edr-max" id="edr-enable" onclick="promptSetMaxEDRBrightness()"><strong>EDR Supported</strong></sub></p> <!-- only visible on EDR displays in WebKit -->
   		</div>
   	</footer>
   	
   </body>
   <script>
+	setupInitialContentView()
   	setQuotesText()
   	twemoji.parse(document.body)
   </script>

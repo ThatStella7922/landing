@@ -3,7 +3,7 @@ ThatStella7922 Landing Website Stylesheet
 
 mreowww :3
 
-v2023.1128.1
+v2023.1128.2
 */
 
 /* small css reset because something was causing issues and im too dumb to figure out what it was */
@@ -26,6 +26,7 @@ body {
 
 a {
     color: #e872e2;
+    font-weight: bold;
 }
 
 p {
@@ -141,22 +142,35 @@ Links Styling
 
 /*
 
-About Styling
+Contentview Styling
 
 */
-/* Maximum width for the about div */
-/* This is done so that the about section doesn't span across the entire width of the viewport in the case of a wide viewport */
-#master #verticalcontainer #about #about-text {
+#master #verticalcontainer #contentview-container {
+    display: grid;
+}
+/* Maximum width for the contentview div */
+/* This is done so that the contentview section doesn't span across the entire width of the viewport in the case of a wide viewport */
+#master #verticalcontainer #contentview-container #contentview-items {
     max-width: 600px;
     display: inline-block;
 }
-/* Styling for the about heading */
-#master #verticalcontainer #about #about-heading {
+/* Styling for all contentview headings */
+#master #verticalcontainer #contentview-container #contentview-headings  {
     margin-top: 7vh;
     font-size: 18px;
-    font-weight: bold;
+    display: block;
 }
-
+/* Styling for not selected contentview headings */
+#master #verticalcontainer #contentview-container #contentview-headings .contentview-notselected {
+    font-weight: lighter;
+    cursor: pointer;
+    color:#b4b4b4
+}
+#master #verticalcontainer #contentview-container #contentview-headings .contentview-selected {
+    font-weight: bold;
+    cursor: normal;
+    color: #FFFFFF;
+}
 /*
 
 Cat Video Styling
@@ -270,7 +284,7 @@ img.emoji {
         max-width: 50vw;
         padding-right: 15px;
     }
-    #master #verticalcontainer #horizontalcontainer #about {
+    #master #verticalcontainer #horizontalcontainer #contentview-container {
         max-width: 50vw;
         padding-right: 15px;
     }
@@ -284,14 +298,13 @@ img.emoji {
     #master #verticalcontainer #textabovelinks {
         margin-top: 5vh;
     }
-    #master #verticalcontainer #horizontalcontainer #about {
-        margin-bottom: 5vh;
-    }
 
     /* Left align the about heading on big screens */
-    #master #verticalcontainer #about #about-heading {
+    #master #verticalcontainer #contentview-container #contentview-headings,
+    #master #verticalcontainer #contentview-container #contentview-headings #contentview-about-heading,
+    #master #verticalcontainer #contentview-container #contentview-headings #contentview-projects-heading {
         margin-top: 0;
-        text-align: left;
+        display: flex;
     }
 
     /* Allow elements in the footer to sit side by side */
