@@ -1,5 +1,5 @@
 # [Stella's Landing Site](https://thatstel.la)
-- Index HTML v2023.1128.2
+- Index HTML v2023.1206.0
   - Main page structure
 - Stylesheet v2023.1128.2
   - Styling, blurs, layout
