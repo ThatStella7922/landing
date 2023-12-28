@@ -43,7 +43,8 @@ body:before {
     left: -2vw;
 	width: 104vw;
 	height: 104vh;
-    background-image: url('landing-assets/IMG0112.jpg');
+    background-image: url('http://thatstel.la/landing-assets/IMG0112.jpg');
+    background-image: url('//thatstel.la/landing-assets/IMG0112.jpg');
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
