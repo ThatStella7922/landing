@@ -3,12 +3,13 @@ ThatStella7922 Landing Website Stylesheet
 
 mreowww :3
 
-v2023.1128.2
+v2023.1228.0
 */
 
 /* small css reset because something was causing issues and im too dumb to figure out what it was */
 body {
     margin: 0px 0px 0px 0px;
+    background-color: #666666;
 }
 
 /* Prevent font scaling in landscape mode on mobile devices while still allowing user zoom */
@@ -38,16 +39,18 @@ body:before {
     z-index: -9; /* Appear under everything */
     content: '';
 	position: fixed;
-	width: 100vw;
-	height: 100vh;
-    background-image: url('http://thatstel.la/landing-assets/IMG4036.jpg');
-    background-image: url('//thatstel.la/landing-assets/IMG4036.jpg');
+    top: -2vh;
+    left: -2vw;
+	width: 104vw;
+	height: 104vh;
+    background-image: url('landing-assets/IMG0112.jpg');
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    overflow: hidden;
 }
 
 #master {
@@ -97,47 +100,52 @@ Links Styling
     display: inline-block;
 }
 /* Arrangement for the social links */
-#master #horizontalcontainer .social-links form {
-    list-style: none;
+#master #horizontalcontainer .social-links .social-link-buttons p {
     padding: 0;
     margin: auto;
     display: inline-block;
 }
 /* Arrangement for the social section label */
-#master #horizontalcontainer .social-links .social-links-label {
+#master #horizontalcontainer .social-links  {
     margin-top: 5vh;
     margin-bottom: 0;
 }
 /* Styling for the social links */
-#master #verticalcontainer #horizontalcontainer .social-links form button {
+#master #horizontalcontainer .social-links .social-link-buttons p {
     background-color: transparent;
     border: none;
     color: white;
     padding: 9px 15px;
     margin: 4px;
-    text-decoration: underline;
     cursor: pointer;
     font-size: 100%;
 }
+/* Override styling for the social link anchor elements so they are not pink or underlined */
+#master #horizontalcontainer .social-links .social-link-buttons p a {
+    color: white;
+    font-weight: normal;
+    text-decoration: underline;
+}
 
 /* Arrangement for the website buttons */
-#master #horizontalcontainer .links form {
+#master #horizontalcontainer .links .button {
     padding: 0;
     margin: auto;
     display: inline-block;
 }
 /* Styling for the website link buttons (buttons pt2) */
-#master #verticalcontainer #horizontalcontainer .links form button {
+#master #verticalcontainer #horizontalcontainer .links .button {
     /* basically make a button */
     background-color: #e872e2;
     border-radius: 25px;
     border: none;
     color: white;
-    padding: 9px 25px;
+    padding: 5px 25px;
     margin: 4px;
     text-decoration: none;
     cursor: pointer;
     font-size: 100%;
+    font-weight: normal;
 }
 
 /*

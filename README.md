@@ -1,7 +1,7 @@
 # [Stella's Landing Site](https://thatstel.la)
-- Index HTML v2023.1212.0
+- Index HTML v2023.1228.0
   - Main page structure
-- Stylesheet v2023.1128.2
+- Stylesheet v2023.1228.0
   - Styling, blurs, layout
 - Quotes JavaScript v2023.0822.0
   - Handles quotes text under the nav buttons, sometimes does other messages
@@ -13,7 +13,7 @@
   - Allows the user to switch between the different views on the site
 - .htaccess v2023.0411.0
   - Rewrites `http://thatstel.la/mailto.html` to a mailto: URI (could be done better but this works)
-- IMG4036.jpg
+- IMG0112.jpg
   - Background image, shot by me
 
 As always, file history in the commits.
