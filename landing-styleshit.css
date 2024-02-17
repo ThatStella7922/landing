@@ -3,13 +3,13 @@ ThatStella7922 Landing Website Stylesheet
 
 mreowww :3
 
-v2023.1228.1
+v2024.0217.0
 */
 
 /* small css reset because something was causing issues and im too dumb to figure out what it was */
 body {
     margin: 0px 0px 0px 0px;
-    background-color: #666666;
+    background-color: #6d6d6d;
 }
 
 /* Prevent font scaling in landscape mode on mobile devices while still allowing user zoom */
@@ -76,18 +76,30 @@ body:before {
     padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left);
 }
 
+/* Move the ThatStella7922 text down */
+#master #verticalcontainer #abovelinks {
+    display: block;
+    margin-top: 15vh;
+    font-size: 49px;
+}
+
 /* Styling for the main ThatStella7922 text */
-#master #displayname {
-    font-size: 52px;
+#master #verticalcontainer #abovelinks #displayname {
     font-weight: 300;
-    margin: 20px 0 20px 0;
+    margin: 0 0 20px 0;
     word-break: break-all;
     color: #ffffff
 }
 
-/* Move the ThatStella7922 text down */
-#master #verticalcontainer #textabovelinks {
-    margin-top: 15vh;
+/* Styling for my profile picture image */
+#master #verticalcontainer #abovelinks #profilepicture {
+    width: 92px; /* fallback for ancient browsers */
+    height: 92px; /* fallback for ancient browsers */
+    width: calc(1em + 40px);
+    height: calc(1em + 40px);
+    object-fit: cover;
+    margin: 0 0 0 0;
+    transform: translateY(20px);
 }
 
 /*
@@ -181,6 +193,8 @@ Contentview Styling
     cursor: normal;
     color: #FFFFFF;
 }
+
+
 /*
 
 Cat Video Styling
@@ -252,9 +266,9 @@ img.emoji {
 
 /* Media query for checking if blending modes are supported */
 @supports (mix-blend-mode: color-dodge) {
-    #master #displayname {
+    #master #verticalcontainer #abovelinks #displayname {
         mix-blend-mode: color-dodge;
-        color: #d8d8d8;
+        color: #adadad;
     }
 }
 
@@ -281,8 +295,26 @@ img.emoji {
   
 /* Media query for screens wider than 800px */
 @media screen and (min-width: 800px) {
-    #master #verticalcontainer #displayname {
+    #master #verticalcontainer #abovelinks {
+        display: flex;
         font-size: 78px;
+    }
+
+    /* Styling for the main ThatStella7922 text */
+    #master #verticalcontainer #abovelinks #displayname {
+        font-weight: 300;
+        margin: 20px 0 20px 0;
+        word-break: break-all;
+    }
+
+    /* Styling for my profile picture image */
+    #master #verticalcontainer #abovelinks #profilepicture {
+        width: calc(1em + 40px);
+        height: calc(1em + 40px);
+        object-fit: cover;
+        margin: 18px 20px 0px 0;
+        transform: none; /* if the browser doesn't have support for initial */
+        transform: initial;
     }
 
     #horizontalcontainer {
@@ -304,8 +336,8 @@ img.emoji {
         padding-right: 15px;
     }
 
-    /* Move the ThatStella7922 text down and add equal bottom margin */
-    #master #verticalcontainer #textabovelinks {
+    /* Move the ThatStella7922 text down */
+    #master #verticalcontainer #abovelinks {
         margin-top: 5vh;
     }
 
@@ -404,7 +436,7 @@ For now, the effect only seems to work properly on WebKit browsers running on Ap
 @media (prefers-color-scheme: dark) {
     /* Set the body color to a very dark gray */
     body {
-        background-color: #1a1a1a;
+        background-color: #0b0b0b;
         color:#FFFFFF;
     }
 
@@ -415,5 +447,14 @@ For now, the effect only seems to work properly on WebKit browsers running on Ap
         -o-filter: blur(9px) brightness(0.4);
         -ms-filter: blur(9px) brightness(0.4);
         filter: blur(9px) brightness(0.4);
+    }
+
+    /* Media query for checking if blending modes are supported
+    This sets a different color in dark mode if blending is supported*/
+    @supports (mix-blend-mode: color-dodge) {
+        #master #verticalcontainer #abovelinks #displayname {
+            mix-blend-mode: color-dodge;
+            color: #d8d8d8;
+        }
     }
 }

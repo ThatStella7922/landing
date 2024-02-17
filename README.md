@@ -1,7 +1,7 @@
 # [Stella's Landing Site](https://thatstel.la)
-- Index HTML v2024.0112.0
+- Index HTML v2024.0217.0
   - Main page structure
-- Stylesheet v2023.1228.1
+- Stylesheet v2024.0217.1
   - Styling, blurs, layout
 - Quotes JavaScript v2023.0822.0
   - Handles quotes text under the nav buttons, sometimes does other messages
@@ -23,7 +23,7 @@ This site was born from the basic visual design of my [old landing site](https:/
 
 I was running into issues when customizing it, so I challenged myself to get the same look while doing a complete rewrite from scratch. No ready-made frameworks, no code from the old site, just a fresh start. Overall, I think it's come out pretty well.
 
-The site attempts to maintain compatibility with older browsers and operating systems, and as such it doesn't require HTTPS and will load on Android 5-era versions of the Android WebView, iOS 6 MobileSafari, IE9, etc. with "good enough" compatibility.
+The site attempts to maintain compatibility with older browsers and operating systems, and as such it doesn't require HTTPS and will load on Android 5-era versions of the Android WebView, iOS 6 MobileSafari, IE9, etc. with "good enough" compatibility. It'll even be functional (albeit not very pretty) on IE**5**.
 
 I appreciate suggestions and new ideas for this website, as it's what most people first see from me. Create GitHub issues as needed, and I'll try to look into things.
 
