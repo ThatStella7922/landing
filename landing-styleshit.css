@@ -22,6 +22,7 @@ body {
 /* Styling for all device sizes */
 body {
     font-family: "Hind", sans-serif;
+    background-color: #1a1a1a;
     color: #ffffff;
 }
 
