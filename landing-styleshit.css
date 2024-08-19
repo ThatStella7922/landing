@@ -200,14 +200,14 @@ Contentview Styling
 Cat Video Styling
 
 */
-#master #verticalcontainer #catvideo {
+#master #verticalcontainer #catvideo-container {
     max-width: 600px;
     max-height: 600px;
     display: none;
     overflow: hidden;
 }
 
-#master #verticalcontainer #catvideo-container {
+#master #verticalcontainer #catvideo {
     height: 50vh;
 }
 
@@ -217,7 +217,7 @@ Cat Video Styling
     object-fit: contain;
 }
 /* Styling for the cat video play/pause button */
-#master #verticalcontainer #catvideo #catbuttons-container button {
+#master #verticalcontainer #catvideo-container #catbuttons-container button {
     /* basically make a button */
     background-color: #e872e2;
     border-radius: 25px;

@@ -11,7 +11,7 @@ function promptShowCat() {
   if (catPrompt) {
     document.getElementById('catvideo-element').src = "//files.thatstel.la/media/important-videos/theCat.mp4";
     document.getElementById('catvideo-element').load();
-    document.getElementById('catvideo').style.display = "inline-block";
+    document.getElementById('catvideo-container').style.display = "inline-block";
     document.getElementById('catbutton-playpause').innerHTML = "Pause cat video";
     document.getElementById('catvideo-element').play();
 
