@@ -231,6 +231,29 @@ Cat Video Styling
 }
 
 
+/*
+
+NTAS Widget (see https://www.dhs.gov/ntas-widget, I added because lordofpc734 in Fruitycord thought it would be funny)
+
+*/
+#master #verticalcontainer #ntaswidget-container {
+    max-width: 600px;
+    max-height: 600px;
+    display: none;
+    overflow: hidden;
+}
+
+#master #verticalcontainer #ntaswidget {
+    height: 50vh;
+}
+
+#master #verticalcontainer #ntaswidget iframe {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
 /* Footer */
 footer {
     z-index: 2;
