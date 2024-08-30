@@ -3,7 +3,7 @@ ThatStella7922 Landing Website Stylesheet
 
 mreowww :3
 
-v2024.0217.0
+v2024.0829.0
 */
 
 /* small css reset because something was causing issues and im too dumb to figure out what it was */
@@ -44,8 +44,9 @@ body:before {
     left: -2vw;
 	width: 104vw;
 	height: 104vh;
-    background-image: url('http://thatstel.la/landing-assets/IMG0112.jpg');
-    background-image: url('//thatstel.la/landing-assets/IMG0112.jpg');
+    background-image: url('http://thatstel.la/landing-assets/BloomRainbow.jpg');
+    background-image: url('//thatstel.la/landing-assets/BloomRainbow.jpg');
+    background-size: 100% 100%; /* for older browsers to scale the bg to the viewport */
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -88,7 +89,7 @@ body:before {
     font-weight: 300;
     margin: 0 0 20px 0;
     word-break: break-all;
-    color: #ffffff
+    color: #ffffff;
 }
 
 /* Styling for my profile picture image */
@@ -274,11 +275,12 @@ img.emoji {
 
 /* Fallback CSS for devices that don't support the "fancier" stuff below with translucency and blurs */
 #master {
-    /* fallback to plain black */
+    /*fallback to plain black*/
     background-color: rgb(0, 0, 0);
-    /* Translucent black if the browser supports it */
-    background-color: rgba(0, 0, 0, 0.3);
+    /*Translucent black if the browser supports it*/
+    background-color: rgba(0, 0, 0, 0.15);
 }
+
 #backdrop-warning {
     display: block;
     margin: 5px;
@@ -291,24 +293,28 @@ img.emoji {
 @supports (mix-blend-mode: color-dodge) {
     #master #verticalcontainer #abovelinks #displayname {
         mix-blend-mode: color-dodge;
-        color: #adadad;
+        color: #a2a2a2;
+    }
+
+    #backdrop-warning {
+        display: none;
     }
 }
 
-/* This media query checks if the browser does the blur filter */
-@supports ((-webkit-filter: blur(9px)) or (-moz-filter: blur(9px)) or (-o-filter: blur(9px)) or (-ms-filter: blur(9px)) or (filter: blur(9px))) {
+/* This media query checks if the browser does the brightness filter */
+@supports ((-webkit-filter: brightness(0.85)) or (-moz-filter: brightness(0.85)) or (-o-filter: brightness(0.85)) or (-ms-filter: brightness(0.85)) or (filter: brightness(0.85))) {
     #master {
         /* Unset fallback from above */
         background-color: initial;
     }
 
     body:before {
-        /*Blur the background*/
-        -webkit-filter: blur(9px) brightness(0.85);
-        -moz-filter: blur(9px) brightness(0.85);
-        -o-filter: blur(9px) brightness(0.85);
-        -ms-filter: blur(9px) brightness(0.85);
-        filter: blur(9px) brightness(0.85);
+        /* dim the background */
+        -webkit-filter: brightness(0.85);
+        -moz-filter: brightness(0.85);
+        -o-filter: brightness(0.85);
+        -ms-filter: brightness(0.85);
+        filter: brightness(0.85);
     }
     
     #backdrop-warning {
@@ -375,83 +381,6 @@ img.emoji {
     /* Allow elements in the footer to sit side by side */
     #footer-sidebyside {
         display: inline-flex;
-    }
-}
-
-
-/* Media query to do EDR on capable devices
-
-For now, the effect only seems to work properly on WebKit browsers running on Apple OSes so I've limited it to only WebKit.
-*/
-#edr-enable {
-    display: none;
-}
-#edr-video {
-    display: none;
-}
-@media screen and (dynamic-range: high) {
-    @supports (-webkit-backdrop-filter: brightness()) {
-        .edr-max {
-            -webkit-backdrop-filter: brightness(1);
-            filter:brightness(2.0)
-        }
-        .edr-high {
-            -webkit-backdrop-filter: brightness(1);
-            filter:brightness(1.75)
-        }
-        .edr-med {
-            -webkit-backdrop-filter: brightness(1);
-            filter:brightness(1.5)
-        }
-        .edr-low {
-            -webkit-backdrop-filter: brightness(1);
-            filter:brightness(1.25)
-        }
-        .edr-lowest {
-            -webkit-backdrop-filter: brightness(1);
-            filter:brightness(1.1)
-        }
-
-        #edr-enable {
-            display: block;
-        }
-
-        /* This styles the HDR video instances according to that of Lunar's website - to work around EDR brightness not being triggered*/
-        #edr-video {
-            z-index: 50;
-            position: fixed;
-            width: 1px;
-            height: 1px;
-            box-shadow: none;
-            filter: none;
-            border: none;
-            border-radius: 0;
-            margin: 0;
-            max-width: revert;
-            opacity: .1;
-            display: block;
-        }
-
-        /* These next four rules move each HDR video to its own corner of the viewport */
-        #edr-video:nth-of-type(1) {
-            top: 0;
-            left:0
-        }
-    
-        #edr-video:nth-of-type(2) {
-            top: 0;
-            right:0
-        }
-    
-        #edr-video:nth-of-type(3) {
-            bottom: 0;
-            right:0
-        }
-    
-        #edr-video:nth-of-type(4) {
-            bottom: 0;
-            left:0
-        }
     }
 }
 

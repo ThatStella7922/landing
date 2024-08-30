@@ -1,7 +1,7 @@
 # [Stella's Landing Site](https://thatstel.la)
-- Index HTML v2024.0616.0
+- Index HTML v2024.0829.0
   - Main page structure
-- Stylesheet v2024.0217.1
+- Stylesheet v2024.0829.1
   - Styling, blurs, layout
 - Quotes JavaScript v2023.0822.0
   - Handles quotes text under the nav buttons, sometimes does other messages
@@ -11,8 +11,8 @@
   - Handles showing the cat video on the website
 - ContentView JavaScript v2023.1128.2
   - Allows the user to switch between the different views on the site
-- .htaccess v2023.0411.0
-  - Rewrites `http://thatstel.la/mailto.html` to a mailto: URI (could be done better but this works)
+- NTAS JavaScript v2024.0829.0
+  - Shows NTAS widget when query string is present (see source)
 - IMG0112.jpg
   - Background image, shot by me
 
@@ -23,9 +23,24 @@ This site was born from the basic visual design of my [old landing site](https:/
 
 I was running into issues when customizing it, so I challenged myself to get the same look while doing a complete rewrite from scratch. No ready-made frameworks, no code from the old site, just a fresh start. Overall, I think it's come out pretty well.
 
-The site attempts to maintain compatibility with older browsers and operating systems, and as such it doesn't require HTTPS and will load on Android 5-era versions of the Android WebView, iOS 6 MobileSafari, IE9, etc. with "good enough" compatibility. It'll even be functional (albeit not very pretty) on IE**5**.
+The site attempts to maintain compatibility with older browsers and operating systems, and as such it doesn't require HTTPS and will load on Android 5-era versions of the Android WebView, iOS 6 MobileSafari, IE9, etc. with "good enough" compatibility. It'll even be functional (albeit not very pretty) on even older browsers like IE**5**.
 
 I appreciate suggestions and new ideas for this website, as it's what most people first see from me. Create GitHub issues as needed, and I'll try to look into things.
+
+## Modification and contribution
+Due to the principles above, this site is incredibly easy to work with.
+
+The site uses just HTML, JavaScript, and CSS. No PHP for now, which makes locally serving it a bit easier.
+
+To get started with the site for local modification:
+1. Clone repo
+2. Visit index.html line 15 and follow the comment to edit the file so it uses local CSS
+3. Start a local web server and visit the page
+4. You are now ready to edit
+
+You can use a live refreshing webserver in your IDE like [Five Server](https://marketplace.visualstudio.com/items?itemName=yandeu.five-server) in VSCode, to make editing even quicker. Or you can use something as basic as Python's integrated webserver.
+
+No building, no npm, no node, no Docker, just a good ol website.
 
 ### Third Party Resources
 - [Font Awesome](https://fontawesome.com/) Free [(v6.4.0)](https://fontawesome.com/v6/docs/changelog/#v6-4-0)

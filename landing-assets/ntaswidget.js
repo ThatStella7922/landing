@@ -3,7 +3,7 @@ ThatStella7922 Landing Website NTAS Widget Handler
 
 (see https://www.dhs.gov/ntas-widget, I added because lordofpc734 in Fruitycord thought it would be funny)
 
-v2024.0819.0
+v2024.0829.0
 */
 
 // This loads the widget, and then unhides the div hosting it so it can be seen on the page
