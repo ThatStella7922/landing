@@ -3,7 +3,7 @@ ThatStella7922 Landing Website Stylesheet
 
 mreowww :3
 
-v2024.0829.0
+v2025.0502.0
 */
 
 /* small css reset because something was causing issues and im too dumb to figure out what it was */
@@ -394,11 +394,11 @@ img.emoji {
 
     /* Make the image darker */
     body:before {
-        -webkit-filter: blur(9px) brightness(0.4);
-        -moz-filter: blur(9px brightness(0.4));
-        -o-filter: blur(9px) brightness(0.4);
-        -ms-filter: blur(9px) brightness(0.4);
-        filter: blur(9px) brightness(0.4);
+        -webkit-filter: brightness(0.4);
+        -moz-filter: brightness(0.4);
+        -o-filter: brightness(0.4);
+        -ms-filter: brightness(0.4);
+        filter: brightness(0.4);
     }
 
     /* Media query for checking if blending modes are supported

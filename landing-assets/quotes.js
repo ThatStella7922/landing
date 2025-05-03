@@ -2,7 +2,7 @@
 ThatStella7922 Landing Website "quotes" Handler
 No I didn't have a better name for it
 
-v2024.1105.0
+v2025.0502.0
 */
 
 // Globals
@@ -36,7 +36,7 @@ function setQuotesText() {
     case 3:
       switch (currentDay) {
         case 23:
-          var quoteText = "Happy birthday to the girl that changed my life. Love you Eva!";
+          var quoteText = "Happy birthday to my moo wife!";
           break;
         default:
           var quoteText = getRandomQuote();
