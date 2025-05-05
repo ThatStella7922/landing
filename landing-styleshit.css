@@ -3,7 +3,7 @@ ThatStella7922 Landing Website Stylesheet
 
 mreowww :3
 
-v2025.0502.0
+v2025.0504.0
 */
 
 /* small css reset because something was causing issues and im too dumb to figure out what it was */
@@ -381,6 +381,30 @@ img.emoji {
     /* Allow elements in the footer to sit side by side */
     #footer-sidebyside {
         display: inline-flex;
+    }
+}
+
+/* Media query detects a max height of 600px to move the thatstella7922 text down a bit 
+   (for long viewports i guess, it looks nicer to my eye) */
+@media screen and (max-height: 680px) {
+    /* Move the ThatStella7922 text down */
+    #master #verticalcontainer #abovelinks {
+        margin-top: 25vh;
+    }
+}
+
+/* Media query for screens under 300px wide (this is mainly for my oneplus watch 3) */
+@media screen and (max-width: 320px) {
+    /* Font size reduction to prevent word break on my name */
+    #master #verticalcontainer #abovelinks {
+        font-size: 40px;
+    }
+
+    /* Reduce some of the space inbetween the social link buttons to make it fit a bit better */
+    #master #horizontalcontainer .social-links .social-link-buttons p {
+        padding: 5px 10px;
+        margin: 0px;
+        font-size: 100%;
     }
 }
 
