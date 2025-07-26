@@ -1,7 +1,7 @@
 # [Stella's Landing Site](https://thatstel.la)
-- Index HTML v2025.0510.0
+- Index HTML v2025.0726.0
   - Main page structure
-- Stylesheet v2025.0510.0
+- Stylesheet v2025.0726.0
   - Styling, dark mode, layouts
 - Quotes JavaScript v2025.0502.0
   - Handles quotes text under the nav buttons, sometimes does other messages
@@ -13,8 +13,6 @@
   - Allows the user to switch between the different views on the site
 - NTAS JavaScript v2024.0829.0
   - Shows NTAS widget when query string is present (see source)
-- BloomRainbow.jpg
-  - Background image, processed by me & sourced from Windows 11 24H2. Bloom into a new, more colorful tomorrow.
 
 As always, file history in the commits.
 
