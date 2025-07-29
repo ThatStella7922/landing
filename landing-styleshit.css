@@ -3,7 +3,7 @@ ThatStella7922 Landing Website Stylesheet
 
 mreowww :3
 
-v2025.0726.0
+v2025.0729.0
 */
 
 /* small css reset because something was causing issues and im too dumb to figure out what it was */
@@ -95,14 +95,15 @@ body:before {
 
 /* Styling for my profile picture image */
 #master #verticalcontainer #abovelinks #profilepicture {
-    width: 92px; /* fallback for ancient browsers */
-    height: 92px; /* fallback for ancient browsers */
+    /* fallback for ancient browsers is in the img tag in HTML */
     width: calc(1em + 40px);
     height: calc(1em + 40px);
     object-fit: cover;
     margin: 0 0 0 0;
     transform: translateY(20px);
+    filter: drop-shadow(0.03em 0.03em 0.1em rgb(79, 64, 77)); /* Shadow for the profile picture */
 }
+
 
 /*
 
@@ -172,8 +173,13 @@ Contentview Styling
 */
 #master #verticalcontainer #contentview-container {
     display: grid;
-    text-shadow: 0.1em 0.1em 0.4em #000000; /* Shadow for all contentview div text */
 }
+
+/* Apply shadow to all contentview div text, on the p element only */
+#master #verticalcontainer #contentview-container p {
+    text-shadow: 0.1em 0.1em 0.4em #000000;
+}
+
 /* Maximum width for the contentview div */
 /* This is done so that the contentview section doesn't span across the entire width of the viewport in the case of a wide viewport */
 #master #verticalcontainer #contentview-container #contentview-items {
@@ -313,11 +319,11 @@ img.emoji {
 
     body:before {
         /* dim the background */
-        -webkit-filter: brightness(0.75);
-        -moz-filter: brightness(0.75);
-        -o-filter: brightness(0.75);
-        -ms-filter: brightness(0.75);
-        filter: brightness(0.75);
+        -webkit-filter: brightness(0.85);
+        -moz-filter: brightness(0.85);
+        -o-filter: brightness(0.85);
+        -ms-filter: brightness(0.85);
+        filter: brightness(0.85);
     }
     
     #backdrop-warning {
